@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mt-5">
+    <h1>Decision Tree Visualization</h1>
+    <img src="{{ url_for('static', filename='images/decision_tree.png') }}" alt="Decision Tree">
+    <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Back to Classifier</a>
+</div>
+{% endblock %}

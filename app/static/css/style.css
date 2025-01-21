@@ -1,0 +1,15 @@
+body {
+    padding-top: 50px;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.footer.light-mode {
+    background-color: #f8f9fa;
+}
+
+.footer.dark-mode {
+    background-color: #212529;
+}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mt-5">
+    <h1>Waste Segregation Classifier</h1>
+    <form action="{{ url_for('classify') }}" method="post">
+        <div class="form-group">
+            <label for="material_type">Material Type</label>
+            <select class="form-control" id="material_type" name="material_type" required>
+                <option value="1">Paper</option>
+                <option value="2">Food</option>
+                <option value="3">Battery</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="decomposition_time">Decomposition Time (in months)</label>
+            <input type="number" class="form-control" id="decomposition_time" name="decomposition_time" required>
+        </div>
+        <div class="form-group">
+            <label for="source">Source</label>
+            <select class="form-control" id="source" name="source" required>
+                <option value="1">Home</option>
+                <option value="2">Restaurant</option>
+                <option value="3">Industry</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Classify</button>
+    </form>
+    <a href="{{ url_for('tree') }}" class="btn btn-info mt-3">View Decision Tree</a>
+</div>
+{% endblock %}
